@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
   // Declare variables for elements
   // STOP Button
@@ -25,21 +25,21 @@
 
   // Functions to run upon element clicks
   function stopButtonClick(event) {
-      stopLight.classList.toggle("stop");
-      if (stopLight.classList.length == 2) {
-        console.log(`${stopButton.innerHTML} bulb on`);
-        slowLight.classList.remove('slow');
-        goLight.classList.remove('go');
-      }
-      else {
-        console.log(`${stopButton.innerHTML} bulb off`);
-      }
+    stopLight.classList.toggle("stop");
+    if (stopLight.classList.length == 2) {
+      console.log(`${stopButton.innerHTML} bulb on`);
+      slowLight.classList.remove('slow');
+      goLight.classList.remove('go');
     }
+    else {
+      console.log(`${stopButton.innerHTML} bulb off`);
+    }
+  }
   function slowButtonClick(event) {
     slowLight.classList.toggle("slow");
     if (slowLight.classList.length == 2) {
       console.log(`${slowButton.innerHTML} bulb on`);
-      slowLight.classList.remove('stop');
+      stopLight.classList.remove('stop');
       goLight.classList.remove('go');
     }
     else {
@@ -51,7 +51,7 @@
     if (goLight.classList.length == 2) {
       console.log(`${goButton.innerHTML} bulb on`);
       slowLight.classList.remove('slow');
-      goLight.classList.remove('stop');
+      stopLight.classList.remove('stop');
     }
     else {
       console.log(`${goButton.innerHTML} bulb off`);
